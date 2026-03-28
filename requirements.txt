@@ -1,3 +1,7 @@
 streamlit
 pytesseract
 Pillow
+PyMuPDF
+reportlab
+pandas
+requests
