@@ -81,14 +81,10 @@ def extract_text_from_pdf(pdf_file):
     except Exception as e:
         return f"Error extracting PDF: {str(e)}"
 
-import pytesseract
-from PIL import Image
-
 def extract_text_from_image(image_file):
     try:
         image = Image.open(image_file)
-        text = pytesseract.image_to_string(image)
-        return text
+        return pytesseract.image_to_string(image)
     except Exception as e:
         return f"Error extracting image: {str(e)}"
 
