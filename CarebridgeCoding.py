@@ -27,7 +27,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 NVIDIA_API_KEY = "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"
-
 def extract_text_from_pdf(pdf_file):
     try:
         pdf_bytes = pdf_file.read()
@@ -44,7 +43,7 @@ def extract_text_from_image(image_file):
         image_bytes = image_file.read()
         b64_image = base64.b64encode(image_bytes).decode("utf-8")
         payload = {
-            "model": "moonshotai/kimi-k2.5",
+            "model": "meta/llama-3.1-70b-instruct",
             "messages": [
                 {
                     "role": "user",
