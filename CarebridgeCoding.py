@@ -16,7 +16,7 @@ st.set_page_config(page_title="CareBridge PDx Tool", layout="wide")
 logging.basicConfig(level=logging.INFO)
 
 # Secure API key
-NVIDIA_API_KEY = st.secrets["NVIDIA_API_KEY"]
+NVIDIA_API_KEY = st.secrets["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"]
 
 API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL = "meta/llama-3.1-70b-instruct"
