@@ -1,3 +1,4 @@
+import streamlit as st
 import base64
 import json
 import requests
@@ -5,9 +6,7 @@ from PIL import Image
 import re
 from datetime import datetime
 import fitz
-
 st.set_page_config(page_title="Home Health PDx Tool", page_icon="Hospital", layout="wide")
-
 st.markdown("""
 <style>
 .result-card {background: #f8f9fa; border-left: 4px solid #0066cc; padding: 15px; border-radius: 5px; margin: 10px 0;}
