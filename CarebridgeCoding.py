@@ -1,6 +1,6 @@
 import streamlit as st
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Common Files\DESIGNER\tesseract.exe"
 import base64
 import json
 import requests
