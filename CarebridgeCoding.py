@@ -163,8 +163,9 @@ Return ONLY valid JSON. No markdown. No explanation. Just the JSON object."""
         json=payload
     )
     data = response.json()
-    raw_text = data["choices"][0]["message"]["content"]
-    cleaned = re.sub(r'```json|```', '', raw_text).strip()
+st.write(data)
+raw_text = data["choices"][0]["message"]["content"]
+cleaned = re.sub(r'```json|```', '', raw_text).strip()
     return json.loads(cleaned)
 
 st.markdown('<div class="main-header">Home Health PDx Tool</div>', unsafe_allow_html=True)
