@@ -1,7 +1,3 @@
-There is an indentation error in your code. The easiest fix is to replace the entire file with clean code.
-
-Go to GitHub, open CarebridgeCoding.py, click pencil, select all, delete everything, paste this entire clean code:
-pythonimport streamlit as st
 import base64
 import json
 import requests
