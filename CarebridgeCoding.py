@@ -33,6 +33,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+NVIDIA_API_KEY = "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"
 API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL = "meta/llama-3.1-70b-instruct"
 
