@@ -1,4 +1,6 @@
 import streamlit as st
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 import base64
 import json
 import requests
@@ -81,12 +83,11 @@ def extract_text_from_pdf(pdf_file):
 
 def extract_text_from_image(image_file):
     try:
-        image_bytes = image_file.read()
-        b64_image = base64.b64encode(image_bytes).decode("utf-8")
-        prompt = f"You are a medical document reader. Extract all text from this medical document completely and accurately. Return only the extracted text with no additional commentary. Base64 image data starts with: {b64_image[:200]}"
-        return call_api(prompt)
-    except Exception as e:
-        return f"Error extracting image: {str(e)}"
+    from PIL import Image
+    image = Image.open(image_file)
+    return pytesseract.image_to_string(image)
+except Exception as e:
+    return f"Error extracting image: {str(e)}"
 
 def build_corrections_context():
     if not st.session_state.corrections:
