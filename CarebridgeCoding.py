@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 import fitz
 
-st.set_page_config(page_title="Home Health PDx Tool", page_icon="🏥", layout="wide")
+st.set_page_config(page_title="Home Health PDx Tool", page_icon="Hospital", layout="wide")
 
 st.markdown("""
 <style>
